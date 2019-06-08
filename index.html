@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>4TT - Monopoly - Projet de fin d'année</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Monopoly crée par Corentinge Liberta et Trashtan Vermèrche">
+        <meta name="description" content="Version JavaScript du jeu de plateau populaire, connu sous le nom de Monopoly.">
+        <meta name="keywords" content="monopoly, jeux en ligne, jeux flash, monopoly javascript, comment faire un monopoly en javascript, jeux en   ligne a plusieurs, indbg, ecole informatique, option informatique">
+        <link rel="stylesheet" href="main.css">
+        <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Titillium+Web" rel="stylesheet">
+        <script src="playerNames.js"></script>
+    </head>
+    <body>
+        <div class="body_holder">
+        <img id="imghead" src="images/logo.png">
+          
+            <h2 class="author">Fièrement présenté par Corentin Libert et Trashstan Vermeescarth</h2><br>
+            <div class="intro">Bienvenu sur la page de démarrage de notre projet de fin d'année.<br>Le but est très simple : Gagner.<br>Si vous êtes ce genre de personnes qui aime bien suivre les règles,<br>je vous propose de lire les règles du jeu sur internet.<br><br></div><br><br>
+            <table class="menu_table">
+                <tr>
+                    <th class="player_selector_divise">
+                        <div class="player_selector">
+                            <div class="player_selector_title">
+                                Les joueurs
+                            </div><br>
+                            <input type="text" name="nom1" placeholder="Joueur1" id="joueur1"><br>
+                            <input type="text" name="nom2" placeholder="Joueur2" id="joueur2"><br>
+                            <input type="text" name="nom3" placeholder="Joueur3" id="joueur3"><br>
+                            <input type="text" name="nom4" placeholder="Joueur4" id="joueur4"><br>
+                        </div><br><br>
+                        
+                    </th>
+                    
+                    <th class="button_divise">
+                        <button class="play_button_homepage" onclick="setPlayerMoney()" onclick="getPlayerNames(joueur1.value, joueur2.value, joueur3.value, joueur4.value)"><a href="board.html">Jouez</a></button>
+                        <br><button class ="credit"><a href="credit.html">Crédits</a></button>
+                    </th>
+                    
+                    <th class="money_selector_divise">
+                        <div class="money_selector">
+                            <div class="money_selector_title">
+                                Argent
+                            </div><br>
+                            <input type="radio" checked="checked" name="money_selector" id="standard_money">Argent de base<br>
+                            <input type="radio" name="money_selector" id="unlimited_money">Illimité<br>
+                            <input type="radio" name="money_selector" id="custom_money">Customisé<br>
+                            <input type="number" name="customprice" placeholder="Argent customisé" id="custom_money"><br>
+                        </div><br><br>
+                    </th>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>

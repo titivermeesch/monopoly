@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>[Board] 4TT - Monopoly - Projet de fin d'année</title>
+       
+            <!-- Meta parameters start -->
+            <meta charset="utf-8">
+            <meta name="author" content="Monopoly crée par Corentinge Liberta et Trashtan Vermèrche">
+            <meta name="description" content="Version JavaScript du jeu de plateau populaire, connu sous le nom de Monopoly.">
+            <meta name="keywords" content="monopoly, jeux en ligne, jeux flash, monopoly javascript, comment faire un monopoly en javascript, jeux en   ligne a plusieurs, indbg, ecole informatique, option informatique">
+            <!-- Meta parameters end -->
+        
+            <!-- Stylesheets start -->
+            <link rel="stylesheet" href="main.css">
+            <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Titillium+Web" rel="stylesheet">
+            <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+            <!-- Stylesheets end -->
+            <script src="script.js"></script>
+            <script src="playerNames.js"></script>
+		</head>
+        
+        
+        <body onload="randomNumberGenerator()" onload="checkPlayerCases()" onload="loadNames()">            
+            <div class="board">
+                <!-- Row 1 up -->
+                <div class="row" id="row1">
+                    <!-- Case parking gratuit -->
+                    <div class="box" id="box-x">
+                        <span class="title" id="white" id="s1">Parking gratuit</span>
+                        <div id="case21Identificator" class="image">
+                        		<div id="rouge21"></div>
+                          		<div id="bleu21"></div>
+                          		<div id="vert21"></div>
+                          		<div id="jaune21"></div>
+                        </div>
+                        <span class="price">0€</span>
+                    </div>
+                    <!-- -->
+            <!-- Ligne haut -->    
+                    <!-- 4G1 -->
+                    <div class="box" id="box-x">
+                        <span class="title" id="red" id="s2">4G1</span>
+                        <div id="case22Identificator" class="image">
+                        		<div id="rouge22"></div>
+                          		<div id="bleu22"></div>
+                          		<div id="vert22"></div>
+                          		<div id="jaune22"></div>
+                   		</div>
+                        <span class="price">220€</span>
+                    </div>
+                    <!-- -->
+                    
+                    <!-- 4G2 -->
+                    <div class="box" id="box-x">
+                        <span class="title" id="red" id="s3">4G2</span>
+                        <div id="case23Identificator" class="image">
+                        		<div id="rouge23"></div>
+                          		<div id="bleu23"></div>
+                          		<div id="vert23"></div>
+                          		<div id="jaune23"></div>
+                        </div>
+                        <span class="price">220€</span>
+                    </div>
+                    <!-- -->
+                
+                    <!-- Chance -->
+                    <div class="box" id="box-x">
+                        <div id="case24Identificator" class="chance">
+                        		<div id="rouge24"></div>
+                          		<div id="bleu24"></div>
+                          		<div id="vert24"></div>
+                          		<div id="jaune24"></div>
+                        </div>
+                    </div>
+                    <!-- -->
+                
+                    <!-- 4G3 -->
+                    <div class="box" id="box-x">
+                        <span class="title" id="red" id="s4">4G3</span>
+                        <div id="case25Identificator" class="image">
+                        		<div id="rouge25"></div>
+                          		<div id="bleu25"></div>
+                          		<div id="vert25"></div>
+                          		<div id="jaune25"></div>
+                        </div>
+                        <span class="price">220€</span>
+                    </div>
+                    <!-- -->
+                    
+                      <!-- Gare -->
+                    <div class="box" id="box-x">
+                        <span class="title" id="white" id="s5">Gare</span>
+                        <div id="case26Identificator" class="gare">
+                        		<div id="rouge26"></div>
+                          		<div id="bleu26"></div>
+                          		<div id="vert26"></div>
+                          		<div id="jaune26"></div>
+                        </div>
+                        <span class="price">200€</span>
+                    </div>
+                    <!-- -->
+                       
+                  
+                
+                    <!-- 5G1 -->
+                    <div class="box" id="box-x">
+                        <span class="title" id="yellow" id="s6">5G1</span>
+                        <div id="case27Identificator" class="image">
+                        		<div id="rouge27"></div>
+                          		<div id="bleu27"></div>
+                          		<div id="vert27"></div>
+                          		<div id="jaune27"></div>
+                        </div>
+                        <span class="price">260€</span>
+                    </div>
+                    <!-- -->
+                    
+                    <!-- 5G2 -->
+                    <div class="box" id="box-x">
+                        <span class="title" id="yellow" id="s7">5G2</span>
+                        <div id="case28Identificator" class="image">
+                        		<div id="rouge28"></div>
+                          		<div id="bleu28"></div>
+                          		<div id="vert28"></div>
+                          		<div id="jaune28"></div>
+                        </div>
+                        <span class="price">260€</span> 
+                    </div>
+                    <!-- -->
+                    
+                    <!-- Electricité -->
+                    <div class="box" id="box-x">
+                        <span class="title" id="red" id="s8">Electricité</span>
+                        <div id="case29Identificator" class="image">
+                        		<div id="rouge29"></div>
+                          		<div id="bleu29"></div>
+                          		<div id="vert29"></div>
+                          		<div id="jaune29"></div>
+                        </div>
+                        <span class="price">240€</span>
+                    </div>
+                    <!-- -->
+                    
+                    <!-- 5G3 -->
+                    <div class="box" id="box-x">
+                        <span class="title" id="yellow" id="s9">5G3</span>
+                        <div id="case30Identificator" class="image">
+                        		<div id="rouge30"></div>
+                          		<div id="bleu30"></div>
+                          		<div id="vert30"></div>
+                          		<div id="jaune30"></div>
+                        </div>
+                        <span class="price">280€</span>
+                    </div>
+                    <!-- -->
+                
+                    <!-- Go prison -->
+                    <div class="box" id="box-x">
+                        <span class="title" id="white" id="s10">Aller en prison</span>
+                        <div id="case31Identificator" class="prison">
+                        		<div id="rouge31"></div>
+                          		<div id="bleu31"></div>
+                          		<div id="vert31"></div>
+                          		<div id="jaune31"></div>
+                        </div>
+                    </div>
+                    <!-- -->
+                </div>
+            
+                <!-- Row right -->
+                <div class="row" id="row2">
+                    <div class="col1">
+                    
+                        <!-- 3G3 -->
+                        <div class="box" id="box-y">
+                            <span class="title" id="orange" id="s11">3G3</span>
+                            <div id="case20Identificator"class="image">
+                            	<div id="rouge20"></div>
+                          		<div id="bleu20"></div>
+                          		<div id="vert20"></div>
+                          		<div id="jaune20"></div>
+                            </div>
+                            <span class="price">200€</span>
+                        </div>
+                        <!-- -->
+                    
+                        <!-- 3G2 -->
+                        <div class="box" id="box-y">
+                            <span class="title" id="orange" id="s12">3G2</span>
+                            <div id="case19Identificator" class="image">
+                            	<div id="rouge19"></div>
+                          		<div id="bleu19"></div>
+                          		<div id="vert19"></div>
+                          		<div id="jaune19"></div>
+                            </div>
+                            <span class="price">180€</span>
+                        </div>
+                        <!-- -->
+                        
+                        <!-- Chance -->
+                        <div class="box" id="box-y">
+                            <div id="case18Identificator" class="chance">
+                            	<div id="rouge18"></div>
+                          		<div id="bleu18"></div>
+                          		<div id="vert18"></div>
+                          		<div id="jaune18"></div>
+                            </div>
+                        </div>
+                        <!-- -->
+                        
+                        <!-- 3G1 -->
+                        <div class="box" id="box-y">
+                            <span class="title" id="orange" id="s13">3G1</span>
+                            <div id="case17Identificator" class="image">
+                            	<div id="rouge17"></div>
+                          		<div id="bleu17"></div>
+                          		<div id="vert17"></div>
+                          		<div id="jaune17"></div>
+                            </div>
+                            <span class="price">180€</span>
+                        </div>
+                        <!-- -->
+                      
+                        
+                          <!-- Gare -->
+                        <div class="box" id="box-y">
+                            <span class="title" id="white" id="s14">Gare</span>
+                            <div id="case16Identificator" class="gare">
+                            	<div id="rouge16"></div>
+                          		<div id="bleu16"></div>
+                          		<div id="vert16"></div>
+                          		<div id="jaune16"></div>
+                            </div>
+                            <span class="price">200€</span>
+                        </div>
+                        <!-- -->
+                      
+            
+                        <!-- 2G3 -->
+                        <div class="box" id="box-y">
+                            <span class="title" id="pink" id="s15">2G3</span>
+                            <div id="case15Identificator" class="image">
+                            	<div id="rouge15"></div>
+                          		<div id="bleu15"></div>
+                          		<div id="vert15"></div>
+                          		<div id="jaune15"></div>
+                            </div>
+                            <span class="price">180€</span>
+                        </div>
+                        <!-- -->
+                      
+                        <!-- 2G2 -->
+                        <div class="box" id="box-y">
+                            <span class="title" id="pink" id="s16">2G2</span>
+                            <div id="case14Identificator" class="image">
+                            	<div id="rouge14"></div>
+                          		<div id="bleu14"></div>
+                          		<div id="vert14"></div>
+                          		<div id="jaune14"></div>
+                            </div>
+                            <span class="price">160€</span>
+                        </div>
+                        <!-- -->
+                        
+                        <!-- Eau -->
+                        <div class="box" id="box-y">
+                            <span class="title" id="orange" id="s17">Eau</span>
+                            <div id="case13Identificator" class="image">
+                            	<div id="rouge13"></div>
+                          		<div id="bleu13"></div>
+                          		<div id="vert13"></div>
+                          		<div id="jaune13"></div>
+                            </div>
+                            <span class="price">180€</span>
+                        </div>
+                        <!-- -->
+                        
+                        <!-- 2G1 -->
+                        <div class="box" id="box-y">
+                            <span class="title" id="pink" id="s18">2G1</span>
+                            <div id="case12Identificator" class="image">
+                            	<div id="rouge12"></div>
+                          		<div id="bleu12"></div>
+                          		<div id="vert12"></div>
+                          		<div id="jaune12"></div>
+                            </div>
+                            <span class="price">160€</span>
+                        </div>
+                        <!-- -->
+		              </div>
+                   
+		          <div class="col3">
+                      <!-- 6G1 -->
+                      <div class="box" id="box-y">
+                          <span class="title" id="green" id="s19">6G1</span>
+                          <div id="case32Identificator" class="image">
+                          		<div id="rouge32"></div>
+                          		<div id="bleu32"></div>
+                          		<div id="vert32"></div>
+                          		<div id="jaune32"></div>
+                          </div>
+                          <span class="price">300€</span>  
+                      </div>
+                      <!-- -->
+                      
+                      <!-- Chance -->
+			          <div class="box" id="box-y">
+                          <div id="case33Identificator" class="chance">
+                          		<div id="rouge33"></div>
+                          		<div id="bleu33"></div>
+                          		<div id="vert33"></div>
+                          		<div id="jaune33"></div>
+                          </div>
+                      </div>
+                      <!-- -->
+                      
+                      <!-- 6G2 -->
+			          <div class="box" id="box-y">
+                          <span class="title" id="green" id="s20">6G2</span>
+                          <div id="case34Identificator"class="image">
+                          		<div id="rouge34"></div>
+                          		<div id="bleu34"></div>
+                          		<div id="vert34"></div>
+                          		<div id="jaune34"></div>
+                          </div>
+                          <span class="price">300€</span>
+                      </div>
+                      <!-- -->
+                      
+                       <!-- 6G2 -->
+			          <div class="box" id="box-y">
+                          <span class="title" id="green" id="s21">6G3</span>
+                          <div id="case35Identificator"class="image">
+                          		<div id="rouge35"></div>
+                          		<div id="bleu35"></div>
+                          		<div id="vert35"></div>
+                          		<div id="jaune35"></div>
+                          </div>
+                          <span class="price">320€</span>
+                      </div>
+                      <!-- -->
+                      
+                       <!-- Gare -->
+			          <div class="box" id="box-y">
+                          <span class="title" id="white" id="s22">Gare</span>
+                          <div id="case36Identificator" class="gare">
+                          		<div id="rouge36"></div>
+                          		<div id="bleu36"></div>
+                          		<div id="vert36"></div>
+                          		<div id="jaune36"></div>
+                          </div>
+                          <span class="price">200€</span>
+                      </div>
+                      <!-- -->
+                      
+                        <!-- Chance -->
+			          <div class="box" id="box-y">
+                          <div id="case33Identificator" class="chance">
+                          		<div id="rouge37"></div>
+                          		<div id="bleu37"></div>
+                          		<div id="vert37"></div>
+                          		<div id="jaune37"></div>
+                          </div>
+                      </div>
+                      <!-- -->
+                                 
+                      
+                      <!-- 4TTA -->
+			          <div class="box" id="box-y">
+                          <span class="title" id="dark_blue" is="s23">4TTA</span>
+                          <div id="case38Identificator"class="image">
+                          		<div id="rouge38"></div>
+                          		<div id="bleu38"></div>
+                          		<div id="vert38"></div>
+                          		<div id="jaune38"></div>
+                          </div>
+                          <span class="price">420€</span>
+                      </div>
+                      <!-- -->
+                      
+                      
+                      <!-- Taxe -->
+			          <div class="box" id="box-y">
+                          <span class="title" id="white" id="s24">Taxe</span>
+                          <div id="case39Identificator" class="taxe">
+                          		<div id="rouge39"></div>
+                          		<div id="bleu39"></div>
+                          		<div id="vert39"></div>
+                          		<div id="jaune39"></div>
+                          </div>
+                          <span class="price">100€</span>
+                      </div>
+                      <!-- -->
+                          
+                      <!-- 4TTB -->
+			          <div class="box" id="box-y">
+                          <span class="title" id="dark_blue" id="s25">4TTB</span>
+                          <div id="case40Identificator" class="image">
+                          	<div id="rouge40"></div>
+                          		<div id="bleu40"></div>
+                          		<div id="vert40"></div>
+                          		<div id="jaune40"></div>
+                          </div>
+                          <span class="price">440€</span>
+                      </div>
+                      <!-- -->
+                      
+		          </div>
+	           </div>
+	           <div class="row" id="row3">
+                   
+                   <!-- Prison -->
+                    <div class="box" id="box-x">
+                        <span class="title" id="white" id="s26">Prison</span>
+                        <div id="case11Identificator" class="prison">
+                        		<div id="rouge11"></div>
+                          		<div id="bleu11"></div>
+                          		<div id="vert11"></div>
+                          		<div id="jaune11"></div>
+                        </div>
+                   </div>
+                   <!-- -->
+                   
+                   <!-- 1G3 -->
+                   <div class="box" id="box-x">
+                       <span class="title" id="light_blue" id="s27">1G3</span>
+                       <div id="case10Identificator" class="image">
+                       			<div id="rouge10"></div>
+                          		<div id="bleu10"></div>
+                          		<div id="vert10"></div>
+                          		<div id="jaune10"></div>
+                       </div>
+                       <span class="price">140€</span>
+                   </div>
+                   <!-- -->
+                   
+                   <!-- 1G2 -->
+                   <div class="box" id="box-x">
+                       <span class="title" id="light_blue" id="s28">1G2</span>
+                       <div id="case9Identificator" class="image">
+                       			<div id="rouge9"></div>
+                          		<div id="bleu9"></div>
+                          		<div id="vert9"></div>
+                          		<div id="jaune9"></div>
+                       </div>  
+                       <span class="price">140€</span>
+                   </div>
+                   <!-- -->
+                   
+                   <!-- Chance -->
+                   <div class="box" id="box-x">
+                       <div id="case8Identificator" class="chance">
+                       			<div id="rouge8"></div>
+                          		<div id="bleu8"></div>
+                          		<div id="vert8"></div>
+                          		<div id="jaune8"></div>
+                       </div>
+                   </div>
+                   <!-- -->
+                   
+                   <!-- 1G1 -->
+                   <div class="box" id="box-x">
+                       <span class="title" id="light_blue" id="s29">1G1</span>
+                       <div id="case7Identificator" class="image">
+                       			<div id="rouge7"></div>
+                          		<div id="bleu7"></div>
+                          		<div id="vert7"></div>
+                          		<div id="jaune7"></div>
+                       </div>
+                       <span class="price">120€</span>
+                   </div>
+                   <!-- -->
+                    <!-- Gare -->
+                   
+                    <div class="box" id="box-x">
+                        <span class="title" id="white" id="s30">Gare</span>
+                        <div id="case6Identificator" class="gare">
+                        		<div id="rouge6"></div>
+                          		<div id="bleu6"></div>
+                          		<div id="vert6"></div>
+                          		<div id="jaune6"></div>
+                        </div>
+                        <span class="price">200€</span>
+                   </div>
+                   <!-- -->
+                   
+                    <!-- Taxe -->
+                    <div class="box" id="box-x">
+                        <span class="title" id="white" id="s31">Taxe</span>
+                        <div id="case5Identificator" class="image">
+                        		<div id="rouge5"></div>
+                          		<div id="bleu5"></div>
+                          		<div id="vert5"></div>
+                          		<div id="jaune5"></div>
+                        </div>
+                        <span class="price">200€</span>
+                   </div>
+                   <!-- -->
+                   
+              
+                   <!-- 6B -->
+                    <div class="box" id="box-x">
+                        <span class="title" id="brown" id="s32">6B</span>
+                        <div id="case4Identificator" class="image">
+                        		<div id="rouge4"></div>
+                          		<div id="bleu4"></div>
+                          		<div id="vert4"></div>
+                          		<div id="jaune4"></div>
+                        </div>
+                        <span class="price">100€</span>                   
+                   </div>
+                   <!-- -->
+                   
+                     <!-- Chance -->
+                    <div class="box" id="box-x">
+                        <div id="case3Identificator" class="chance">
+                        		<div id="rouge3"></div>
+                          		<div id="bleu3"></div>
+                          		<div id="vert3"></div>
+                          		<div id="jaune3"></div>
+                        </div>
+                    </div>
+                    <!-- -->
+                   
+                   <!-- 6A -->
+                    <div class="box" id="box-x">
+                        <span class="title" id="brown" id="s33">6A</span>
+                        <div id="case2Identificator" class="image">
+                        		<div id="rouge2"></div>
+                          		<div id="bleu2"></div>
+                          		<div id="vert2"></div>
+                          		<div id="jaune2"></div>
+                        </div>
+                        <span class="price">80€</span>
+                   </div>
+                   <!-- -->
+                   
+                   <!-- Start -->
+                    <div class="box" id="box-x">
+                        <div id="case1Identificator" class="start">
+                        		<div id="rouge1"></div>
+                          		<div id="bleu1"></div>
+                          		<div id="vert1"></div>
+                          		<div id="jaune1"></div>
+                        </div>
+                   </div>
+                   <!-- -->
+                </div>
+            </div>
+            <div>
+            	<button id="myBtn" onclick="Game(), updatePlayerNames()">Lancement des dès</button>
+            	<img src="images/des6.jpg" alt="des1" id="imageDes1"/>
+            	<img src="images/des6.jpg" alt="des2" id="imageDes2"/>
+            </div>
+            <div class="playerHolder">
+            	<div id="player1name"></div>
+            	<div id="player2name"></div>
+            	<div id="player3name"></div>
+            	<div id="player4name"></div>
+            </div><br><br><br><br><br><br><br><br>
+            
+            <div class="informationBoard">
+            	<div id="boardTitle"></div>
+            	<div id="boardAuteur"></div>
+            	<div id="boardSansMaison"></div>
+            	<div id="boardUneMaison"></div>
+            	<div id="boardDeuxMaison"></div>
+            	<div id="boardTroisMaison"></div>
+            	<div id="boardQuatreMaison"></div>
+            	<button id="shopButton" onclick="payCard()">Payer/Acheter</button>
+            	<button id="doubleButton">Relancer</button>
+            </div>
+            
+            <div id="button-board">
+            	<button class ="home-button"><a href="index.html"><i class="fa fa-home fa-2x" aria-hidden="true"></i></a></button>
+            	<button class ="setting"><a href="setting.html"><i class="fa fa-cog fa-spin fa-2x fa-fw"></i><span class="sr-only"></span></a></button>
+            	<button class="debug" onclick="toggleDebug()"><a href="#"></a><i class="fa fa-bug fa-4x" aria-hidden="true"></i></button>	
+            </div>
+        </body>
+    </html>
